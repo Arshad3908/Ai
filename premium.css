@@ -1,0 +1,97 @@
+body {
+    font-size: 14px;
+    font-family: "Moderat","Inter",sans-serif;
+    font-weight: 400;
+    color: #333;
+}
+
+#start-payment-button {
+    cursor: pointer;
+    position: relative;
+    background-color: linear-gradient( #4285f4, #d96570);
+    color: #12122c;
+    max-width: 100%;
+    padding: 7.5px 16px;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    transition: all .1s ease-in;
+    vertical-align: middle;
+}
+.suggestion-list {
+    width: 100%;
+    list-style: none;
+    display: block;
+    gap: 1.25rem;
+    margin-top: 9.5vh;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    
+  }
+  
+  .suggestion-list .suggestion {
+    cursor: pointer;
+    padding: 1.25rem;
+    width: 666px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 0.75rem;
+    justify-content: space-between;
+    background: var(--secondary-color);
+    transition: 0.2s ease;
+  }
+  /* For small screens like mobile devices (up to 480px) */
+@media (max-width: 480px) {
+.suggestion-list .suggestion {
+  width: 100%;
+  padding: 1rem;
+  align-items: center;
+}
+}
+
+/* For tablets and small laptops (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+.suggestion-list .suggestion {
+  width: 100%;
+  padding: 1.25rem;
+  align-items: center;
+}
+}
+
+/* For laptops (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+.suggestion-list .suggestion {
+  width: 450px;
+  padding: 1.25rem;
+  align-items: flex-end;
+}
+}
+
+  
+  .suggestion-list .suggestion:hover {
+    background: var(--secondary-hover-color);
+  }
+  
+  .suggestion-list .suggestion :where(.text, .icon) {
+    font-weight: 400;
+    color: var(--text-color);
+  }
+  
+  .suggestion-list .suggestion .icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+    align-self: flex-end;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    color: var(--text-color);
+    background: var(--primary-color);
+  }
